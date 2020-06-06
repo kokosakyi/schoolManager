@@ -40,7 +40,6 @@ const createSendToken = (user, statusCode, res) => {
 
 // USER SIGN UP
 exports.signup = catchAsync(async (req, res, next) => {
-    console.log(req.body);
     const newUser = await User.create({
         firstName: req.body.firstName,
         surname: req.body.surname,

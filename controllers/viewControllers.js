@@ -41,8 +41,6 @@ exports.createStudent =  async (req, res, next)=> {
             gender: req.body.gender.toLowerCase()
         }
 
-        console.log(req.file.buffer);
-
         // Uploaded photo
         const uploadedPhoto = req.file.buffer;
         
@@ -80,7 +78,6 @@ exports.getStudents = catchAsync(async (req, res, next)=> {
 exports.getStudentDetail = catchAsync(async (req, res, next)=> {
     // Retrieve student
     const student = await Student.findById(req.params.id);
-    console.log(student);
     res.render('student-detail', {
         title: 'Student Details',
         student

@@ -21,7 +21,7 @@ const signUp = async (user) => {
     try {
         const result = await axios({
             method: 'POST',
-            url: 'http://127.0.0.1:3000/sign-up',
+            url: '/sign-up',
             data: {
                 ...user
             }
@@ -33,7 +33,6 @@ const signUp = async (user) => {
         });
     }
     catch(error) {
-        console.log(error);
         Swal.fire({
             icon: 'error',
             title: '',
