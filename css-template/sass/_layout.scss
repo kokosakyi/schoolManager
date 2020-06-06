@@ -1,0 +1,209 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 120rem;
+    background-color: transparent;
+    box-shadow: $rich-black;
+    min-height: 50rem;
+    padding-top: 5rem;
+}
+
+.header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .3rem;
+    background-color: #fff;
+    margin-bottom: 2rem;
+
+    h1 {
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: uppercase;
+        flex: 1;
+        text-align: center;
+    }
+
+    .user-info {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    background-color: #fff;
+
+    .sidebar {
+        flex: 0 0 18%;
+        color: #fff;
+        margin-bottom: 1rem;
+
+        .side-nav {
+            background-color: white;
+
+            .side-nav__item {
+                text-align: center;
+                border: 1px solid;
+                list-style: none;
+
+                a {
+                    display: block;
+                    color: #fff;
+                    background-color: $rich-black;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 1rem;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-bottom: .5rem;
+                }
+
+                a:first-child {
+                    margin-top: .5rem;
+                }
+
+                a:hover {
+                    background-color: $imperial-red;
+                }
+
+            }
+        }
+
+    }
+
+    .main-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+    }
+}
+
+
+
+.main-info .card {
+    margin-bottom: 2rem;
+}
+
+.info-card-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+
+    img {
+        width: 15rem;
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+
+}
+
+.info-list-block {
+    font-size: 1.5rem;
+}
+
+.info-list-block > table {
+    margin-bottom: 3rem;
+}
+
+.text-info {
+    font-weight: bold;
+}
+
+footer {
+    background-color: $rich-black;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+.student-form {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+
+    input, select {
+        font-size: 1em;
+    }
+
+    .btn {
+        align-self: flex-end;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 57.6rem) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 76.8rem) {
+
+    .main-content {
+        display: flex;
+        flex-direction: row;
+
+        .sidebar {
+            min-height: 100vh;
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 0.5rem;
+            margin-bottom: 0;
+        }
+
+        .main-info {
+            min-height: 100vh;
+            padding: 1rem;
+        }
+    }
+
+    .info-card-block {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        table {
+            margin-right: 5rem;
+        }
+    }
+
+    .student-form {
+        font-size: 1.2em;
+
+        input, select {
+            font-size: 1em;
+        }
+    }
+
+    .header {
+        .user-info {
+            display: flex;
+            justify-content: space-between;
+
+            .welcome-message {
+                margin-right: 2rem;
+            }
+
+            .btn-logout {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 99.2rem) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 120rem) {}

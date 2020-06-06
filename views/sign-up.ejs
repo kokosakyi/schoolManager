@@ -1,0 +1,33 @@
+<%- include('includes/header', {title}) %>   
+       <div class="login-form">
+            <h2>Sign Up</h2>
+            <img src="/img/sign-up.png" alt="">
+            <form method="POST" class="signUpForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname" class="form-control" id="surname" placeholder="Surname">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Other Names</label>
+                    <input type="text" name="otherNames" class="form-control" id="otherNames" placeholder="Other Names">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="passwordConfirm">Confirm Password</label>
+                    <input type="password" name="passwordConfirm" class="form-control" id="passwordConfirm" placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="btn btn-outline-danger btn-sign-up">Sign Up</button>
+            </form>
+        </div>
+<%- include('includes/footer') %>

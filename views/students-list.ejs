@@ -1,0 +1,45 @@
+<%- include('includes/header', {title}) %>   
+
+<%- include('includes/dashboard-header', {user}) %>
+<div class="main-content">
+    <%- include('includes/side-nav') %>
+    <main class="main-info">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title text-center">List of Students</h2>
+                <table class="table table-responsive-sm">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Student ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Admission Date</th>
+                        <th scope="col">Current Class</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Completion Date</th>
+                        <th scope="col"></th>
+                    </tr>
+                    <tbody>
+                        <% students.forEach(function(student, index) { %>
+                            <tr>
+                                <td><%= index + 1 %></td>
+                                <td><a href="#">F10013534</a></td>
+                                <td><%= student.lastName %>, <%= student.firstName %> <%= student.otherNames %></td>
+                                <td><%= student.gender %></td>
+                                <td><%= student.dateOfBirth.toLocaleDateString() %></td>
+                                <td>3S3</td>
+                                <td>Student</td>
+                                <td>N.A.</td>
+                                <td><a href="/student-detail/<%= student._id %>" class="btn btn-danger">View Details</a></td>
+                            </tr>
+                        <% }); %>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+    
+</div>  
+<%- include('includes/footer') %>

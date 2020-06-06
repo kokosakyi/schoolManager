@@ -1,0 +1,24 @@
+<%- include('includes/header', {title}) %>
+
+<%- include('includes/dashboard-header', {user}) %>
+<div class="main-content">
+    <%- include('includes/side-nav') %>
+    <main class="main-info">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title text-center">STUDENTS MENU</h2>
+                <div class="menu-button">
+                    <img src="/img/add-student.png" class="img-fluid" alt="">
+                    <a href="/add-student" class="btn btn-lg btn-outline-danger">Add Student</a>
+                </div>
+                <div class="menu-button">
+                    <img src="/img/student-list.png" class="img-fluid" alt="">
+                    <a href="/students-list" class="btn btn-lg btn-outline-danger">View Students</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+</div>
+<%- include('includes/footer') %>
